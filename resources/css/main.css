@@ -1,0 +1,86 @@
+@import 'base.css';
+
+.navbar {
+    @apply bg-uh-bg-1 text-uh-blue;
+    @apply border-b border-uh-border-color;
+
+    &-brand {
+        @apply flex items-center;
+        @apply font-serif text-4xl font-bold;
+    }
+
+    &-toggler {
+        @apply inline-flex p-2;
+    }
+
+    .nav-item {
+        @apply text-sm text-gray-700 hover:bg-slate-50 focus:bg-slate-100 leading-5;
+        @apply block px-4 py-2 focus:outline-none transition;
+    }
+}
+
+.navbar-mobile {
+    .nav-item {
+        @apply text-gray-700;
+        @apply block pl-3 pr-4 py-2 font-medium transition;
+
+        &-username {
+            @apply font-semibold;
+        }
+
+        &-email {
+            @apply text-gray-500 font-medium text-sm;
+        }
+    }
+}
+
+
+#power-grid-table-base {
+    > div:has(> div > #table_base_default) {
+        border-radius: unset;
+    }
+
+    table {
+        thead {
+            @apply bg-uh-bg-2;
+            box-shadow: none;
+            border-radius: unset;
+        }
+
+        td {
+            border: 1px solid;
+            border-color: rgb(226 232 240 / var(--tw-border-opacity));;
+        }
+
+        td:last-child {
+            border-right-color: inherit;
+        }
+    }
+
+    #pg-footer {
+        border: none;
+    }
+}
+
+
+.page_about {
+    dl {
+        display: grid;
+        grid-gap: 4px 16px;
+        grid-template-columns: max-content;
+    }
+
+    dt {
+        @apply w-56 md:w-64;
+        @apply font-semibold md:font-normal;
+    }
+
+    dd {
+        @apply ms-6 md:col-start-2;
+    }
+
+    .config-value-bool {
+        padding: .1em .2em;
+        @apply bg-gray-100 rounded
+    }
+}
